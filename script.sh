@@ -1,3 +1,5 @@
 echo 'running the script'
-npm --version
-echo 'closing the script down'
+touch newfile.txt
+echo 'abc efgh ijk' >> newfile.txt
+cat newfile.txt
+
