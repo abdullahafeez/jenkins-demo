@@ -24,8 +24,14 @@ pipeline {
             }
         }
       stage('Test') {
+            input{
+                message "Select the test type"
+                ok "Done"
+                choice(name: 'ENV',choices: ['A','B','C'], description: '')
+            }
             steps {
                 script{
+                    echo "Testing with $(ENV)"
                     gv.testApp()
                 }
             }
@@ -37,8 +43,12 @@ pipeline {
                     }
                 }
             steps {
+                script{
+                    env.VAR = input message: "select the environment to deploy to", ok: "Done", parameters: [choice(name: 'ONE',choices: ['dev','staging','prod'], description: '')]    
+                }
                 
-                echo "Deploying the app... ${env.PIPELINE_VERSION}"
+                echo "Deploying the app to ${env.VAR} with pipleline setting version ${env.PIPELINE_VERSION}"
+                
             }
         }
     }
