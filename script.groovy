@@ -5,3 +5,5 @@ def buildApp(){
 def testApp(){
   echo 'testing the application'
 }
+
+return this
