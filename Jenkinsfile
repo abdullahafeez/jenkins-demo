@@ -27,7 +27,9 @@ pipeline {
             input{
                 message "Select the test type"
                 ok "Done"
+                parameters {
                 choice(name: 'ENV',choices: ['A','B','C'], description: '')
+                }
             }
             steps {
                 script{
