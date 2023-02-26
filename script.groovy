@@ -1,5 +1,5 @@
 def buildApp(){
- echo "building the app with $(params.VERSION)"
+ echo "building the app with ${params.VERSION}"
 }
 
 def testApp(){
