@@ -5,7 +5,7 @@ pipeline {
         PIPELINE_VERSION = '1.5'
     }
     parameters {
-        choice(name: 'VERSION',choices: ['1.0',1.1','1.2','1.3'], description: '')
+        choice(name: 'VERSION',choices: ['1.0','1.1','1.2','1.3'], description: '')
         booleanParam(name: 'executeTests' , defaultValue: true, description: '')        
     }
     stages {
