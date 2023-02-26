@@ -36,7 +36,7 @@ pipeline {
                 }
             steps {
                 
-                echo 'Deploying the app... $(env.PIPELINE_VERSION)'
+                echo "Deploying the app... $(env.PIPELINE_VERSION)"
             }
         }
     }
