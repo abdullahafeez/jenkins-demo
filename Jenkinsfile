@@ -31,7 +31,7 @@ pipeline {
       stage('Deploying') {
           when{
                 expression {
-                    VERSION == '1.1'   
+                    params.VERSION == '1.1'   
                     }
                 }
             steps {
