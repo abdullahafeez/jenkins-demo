@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 script{
-                    echo "Testing with $(ENV)"
+                    echo "Testing with ${ENV}"
                     gv.testApp()
                 }
             }
